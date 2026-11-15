@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Knapp-räknare</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2ecc40">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
   <style>
     html, body {
       height: 100%;
@@ -47,6 +51,10 @@
       count++;
       counter.textContent = count;
     });
+
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js");
+    }
   </script>
 </body>
 </html>

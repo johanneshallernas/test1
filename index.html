@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knapp-räknare</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      font-family: sans-serif;
+      background: #ffffff;
+    }
+    #counter {
+      font-size: 64px;
+      font-weight: bold;
+    }
+    #button {
+      background: #2ecc40;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: 24px 48px;
+      font-size: 28px;
+      cursor: pointer;
+    }
+    #button:active {
+      background: #25a233;
+    }
+  </style>
+</head>
+<body>
+  <div id="counter">0</div>
+  <button id="button">Tryck</button>
+
+  <script>
+    let count = 0;
+    const counter = document.getElementById("counter");
+    document.getElementById("button").addEventListener("click", () => {
+      count++;
+      counter.textContent = count;
+    });
+  </script>
+</body>
+</html>
